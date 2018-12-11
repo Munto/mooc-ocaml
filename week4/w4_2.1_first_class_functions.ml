@@ -8,5 +8,5 @@ let rec fixedpoint f start delta =
   let current = f start in
   let next = f current in
   if abs_float (current -. next) < delta
-  then start
+  then current
   else fixedpoint f current delta
